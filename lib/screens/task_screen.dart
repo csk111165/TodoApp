@@ -13,7 +13,7 @@ class TaskScreen extends StatelessWidget {
         padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
         child: const Column(
           children: [
-            Icon(Icons.list),
+            CircleAvatar(child: Icon(Icons.list)),
             Text("ToDo"),
       
           ],
