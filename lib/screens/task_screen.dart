@@ -59,7 +59,7 @@ class TaskScreen extends StatelessWidget {
             // botton half part
             Expanded(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -82,10 +82,8 @@ class TaskList extends StatelessWidget {
     return ListView(
       children: [
         TaskTile(),
-          ListTile(
-          title: Text('This is a another task'),
-          trailing: Checkbox(value: false, onChanged: (value) {}),
-          ),
+        TaskTile(),
+        TaskTile(),
       ],
     );
   }
