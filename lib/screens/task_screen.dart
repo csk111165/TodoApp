@@ -7,6 +7,14 @@ class TaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.lightBlueAccent,
+        // adding a button
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.lightBlueAccent,
+          child: Icon(Icons.add),
+          onPressed: () {
+            // need to do something
+          },
+          ),
         // wrapping the column with Container will allow the text and icon to appear at the correct location
         // by defining the padding property
         body: Column(
