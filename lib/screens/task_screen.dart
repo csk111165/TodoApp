@@ -3,7 +3,6 @@ import 'package:todo_app/widgets/tasks_list.dart';
 
 class TaskScreen extends StatelessWidget {
 
-  Widget buildBottonSheet(BuildContext context) => Container();
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class TaskScreen extends StatelessWidget {
           child: Icon(Icons.add),
           onPressed: () {
             // need to do something
-            showModalBottomSheet(context: context, builder: buildBottonSheet);
+            showModalBottomSheet(context: context, builder: (BuildContext context) => Container());
           },
           ),
         // wrapping the column with Container will allow the text and icon to appear at the correct location
