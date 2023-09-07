@@ -14,9 +14,9 @@ class TaskScreen extends StatelessWidget {
         child: const Column(
           children: [
             CircleAvatar(
-              child: Icon(Icons.list),
+              child: Icon(Icons.list, size: 30,),
               backgroundColor: Colors.white,
-
+              radius: 30.0,
               ),
             Text("ToDo"),
       
