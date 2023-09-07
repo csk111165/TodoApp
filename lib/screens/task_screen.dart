@@ -5,6 +5,16 @@ class TaskScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
+      body: Column(
+        children: [
+          Icon(Icons.list),
+          Text("ToDo"),
+
+        ],
+      )
+    );
+      
   }
 }
