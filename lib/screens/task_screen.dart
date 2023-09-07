@@ -29,6 +29,8 @@ class TaskScreen extends StatelessWidget {
                 "ToDo",
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.w700,
                 ),
                 ),
             ],
