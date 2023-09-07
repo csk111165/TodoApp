@@ -43,11 +43,12 @@ class TaskScreen extends StatelessWidget {
                   ),
                 ),
                 // botton half part
-                Container(
-                  height: 300.0,
-                  decoration: BoxDecoration(
-                    color:  Colors.white,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color:  Colors.white,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                    ),
                   ),
                 )
             ],
