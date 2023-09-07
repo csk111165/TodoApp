@@ -12,6 +12,7 @@ class TaskScreen extends StatelessWidget {
         body: Container(
           padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
           child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
                 child: Icon(
