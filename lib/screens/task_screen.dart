@@ -11,7 +11,7 @@ class TaskScreen extends StatelessWidget {
         // by defining the padding property
         body: Container(
           padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
-          child: const Column(
+          child:  Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
@@ -34,6 +34,20 @@ class TaskScreen extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
                 ),
+
+                Text(
+                  '12 Tasks',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+                // botton half part
+                Container(
+                  color:  Colors.white,
+                  height: 300.0,
+                  
+                )
             ],
           ),
         ));
