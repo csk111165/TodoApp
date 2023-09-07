@@ -6,25 +6,27 @@ class TaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
-      // wrapping the column with Container will allow the text and icon to appear at the correct location
-      // by defining the padding property
-      body: Container(
-        padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
-        child: const Column(
-          children: [
-            CircleAvatar(
-              child: Icon(Icons.list, size: 30, color: Colors.blueAccent,),
-              backgroundColor: Colors.white,
-              radius: 30.0,
-              
+        backgroundColor: Colors.lightBlueAccent,
+        // wrapping the column with Container will allow the text and icon to appear at the correct location
+        // by defining the padding property
+        body: Container(
+          padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
+          child: const Column(
+            children: [
+              CircleAvatar(
+                child: Icon(
+                  Icons.list,
+                  size: 30,
+                  color: Colors.lightBlueAccent,
+                ),
+                backgroundColor: Colors.white,
+                radius: 30.0,
               ),
-            Text("ToDo"),
-      
-          ],
-        ),
-      )
-    );
-      
+              SizedBox(height: 10.0,),
+
+              Text("ToDo"),
+            ],
+          ),
+        ));
   }
 }
