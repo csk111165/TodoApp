@@ -5,12 +5,13 @@ class TaskScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      // wrapping the column with SafeArea will allow the text and icon to appear at the correct location
-      // otherwise it will be show at top right
-      body: SafeArea(
-        child: Column(
+      // wrapping the column with Container will allow the text and icon to appear at the correct location
+      // by defining the padding property
+      body: Container(
+        padding: EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 30),
+        child: const Column(
           children: [
             Icon(Icons.list),
             Text("ToDo"),
