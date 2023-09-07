@@ -4,7 +4,12 @@ import 'package:todo_app/widgets/tasks_list.dart';
 class TaskScreen extends StatelessWidget {
 
   Widget buildBottonSheet(BuildContext context) {
-    return Container();
+    return Container(
+      color: Colors.yellow,
+      child: Center(
+        child: Text("chandra shekhar"),
+      ),
+    );
   }
 
   @override
