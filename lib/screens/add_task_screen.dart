@@ -16,9 +16,20 @@ class AddTaskScreen extends StatelessWidget {
         ),
         child: Column(
               children: [
-                  Text('Add Task'),
-                  TextField(), 
-                  TextButton(onPressed: () {} ), child: child)
+                  Text(
+                    'Add Task',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.lightBlueAccent
+                    ),
+                    ),
+                  TextField(
+                    // to auto enable keyboard pop up
+                    autofocus: true,
+                    textAlign: TextAlign.center,
+                  ), 
+                  TextButton(onPressed: () {} , child: Text('Add new task'),
+                  )
               ],
           
         ),
