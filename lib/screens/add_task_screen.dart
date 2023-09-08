@@ -28,7 +28,12 @@ class AddTaskScreen extends StatelessWidget {
                     autofocus: true,
                     textAlign: TextAlign.center,
                   ), 
-                  TextButton(onPressed: () {} , child: Text('Add new task'),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.lightBlueAccent)
+                    ),
+                    onPressed: () {} , 
+                    child: Text('Add'),
                   )
               ],
           
