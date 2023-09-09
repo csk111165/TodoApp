@@ -26,8 +26,7 @@ class TaskTile extends StatelessWidget {
         activeColor: Colors.lightBlueAccent,
         value: isChecked,
         onChanged: (bool? value) {
-          print("callback from the Checkbox $value");
-          checkboxCallback(value!);
+          checkboxCallback(value);
         },
         
     ),

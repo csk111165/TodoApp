@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatelessWidget {
+
+  late String newTaskTitle;
+  final Function addTaskCallback; 
+
+  AddTaskScreen(this.addTaskCallback);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xff757575),
       child: Container(
         padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
@@ -17,7 +23,7 @@ class AddTaskScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Add Task',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -29,14 +35,19 @@ class AddTaskScreen extends StatelessWidget {
               // to auto enable keyboard pop up
               autofocus: true,
               textAlign: TextAlign.center,
+              onChanged: (value) {
+                newTaskTitle = value;
+              },
             ),
             TextButton(
               style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(Colors.lightBlueAccent),
               ),
-              onPressed: () {},
-              child: Text(
+              onPressed: () {
+                addTaskCallback(newTaskTitle);
+              },
+              child: const Text(
                 'Add',
                 style: TextStyle(
                   color: Colors.white,

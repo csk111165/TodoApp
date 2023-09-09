@@ -7,10 +7,9 @@ class Task {
 
   Task({required this.name, this.isDone = false});
 
-  void toogleDone(bool? value){
+  void toogleDone(){
     // just reverse the state
-    isDone = value ?? false; // converting bool to bool? Trick
-    print("what is isDone $isDone");
+    isDone = !isDone;
   }
 
 }

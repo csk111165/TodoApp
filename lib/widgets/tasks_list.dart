@@ -6,17 +6,17 @@ import 'package:todo_app/models/task.dart';
 
 
 class TaskList extends StatefulWidget {
-  const TaskList({super.key});
+
+  final List<Task> tasks;
+
+  TaskList(this.tasks);
+
   @override
   State<TaskList> createState() => _TaskListState();
 }
 
 class _TaskListState extends State<TaskList> {
-   List<Task> tasks = [
-      Task(name: 'Buy milk', isDone: false),
-      Task(name: 'Buy eggs', isDone: true),
-      Task(name: 'Buy breadddd', isDone: true),
-    ];
+   
 
   @override
   Widget build(BuildContext context) {
@@ -25,18 +25,19 @@ class _TaskListState extends State<TaskList> {
     return ListView.builder(
       itemBuilder: (context, index) {
         return TaskTile(
-          taskTitle: tasks[index].name,
-          isChecked: tasks[index].isDone,
+          // since tasks is pulled out from the build method and put into TaskList staefulwidget class above,
+          // the task will be accessed via widget(which represents a stateful widget)
+          taskTitle: widget.tasks[index].name,
+          isChecked: widget.tasks[index].isDone,
           checkboxCallback: (bool checkboxState) {
-            print("what is value from callback $checkboxState");
             setState(() {
-              tasks[index].toogleDone(checkboxState);
+              widget.tasks[index].toogleDone();
             });
           },  
         );
       },
       // this will allow to iterate through the list by giving the stoppind condition
-      itemCount: tasks.length,
+      itemCount: widget.tasks.length,
     );
   }
 }
