@@ -4,9 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:todo_app/models/task_data.dart';
 
 
-
-
-
 class TaskList extends StatelessWidget {
 
   @override
