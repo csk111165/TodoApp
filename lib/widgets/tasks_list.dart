@@ -14,6 +14,7 @@ class TaskList extends StatelessWidget {
    
     // builder is used to render a large number of list items
     return Consumer<TaskData>(
+      //taskData is an instace of TaskData provided by Consumer<TaskData> ..
       builder: (context, taskData, child) {
         return ListView.builder(
         itemBuilder: (context, index) {
@@ -25,6 +26,9 @@ class TaskList extends StatelessWidget {
             checkboxCallback: (bool checkboxState) {
               taskData.updateTask(task);
             },  
+            longPressCallback: () {
+              taskData.delteTask(task);
+            },
           );
         },
         // this will allow to iterate through the list by giving the stoppind condition
