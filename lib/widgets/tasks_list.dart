@@ -6,27 +6,32 @@ import 'package:todo_app/models/task_data.dart';
 
 
 
+
 class TaskList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
    
     // builder is used to render a large number of list items
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        return TaskTile(
-          // Now we use Provider to get the shared data
-          taskTitle: Provider.of<TaskData>(context).tasks[index].name,
-          isChecked: Provider.of<TaskData>(context).tasks[index].isDone,
-          checkboxCallback: (bool checkboxState) {
-            // setState(() {
-            //   Provider.of<TaskData>(context).tasks[index].toogleDone();
-            // });
-          },  
-        );
+    return Consumer<TaskData>(
+      builder: (context, taskData, child) {
+        return ListView.builder(
+        itemBuilder: (context, index) {
+          
+          return TaskTile(
+            // Now we use Provider to get the shared data
+            taskTitle: taskData.tasks[index].name,
+            isChecked: taskData.tasks[index].isDone,
+            checkboxCallback: (bool checkboxState) {
+              taskData.updateTask(taskData.tasks[index]);
+            },  
+          );
+        },
+        // this will allow to iterate through the list by giving the stoppind condition
+        itemCount: taskData.taskCount,
+      );
       },
-      // this will allow to iterate through the list by giving the stoppind condition
-      itemCount: Provider.of<TaskData>(context).tasks.length,
+      
     );
   }
 }

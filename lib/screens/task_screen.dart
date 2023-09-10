@@ -26,14 +26,7 @@ class _TaskScreenState extends State<TaskScreen> {
           onPressed: () {
             // need to do something
             showModalBottomSheet(context: context, builder: (BuildContext context) => AddTaskScreen(
-              (newTaskTitle) {
-                // setState(() {
-                //   // create a new task
-                //   tasks.add(Task(name: newTaskTitle));
-                // });
-                // This is to remove the add task screen automatically when the task is added successfully.
-                Navigator.pop(context);
-              }
+              
             ));
           },
           ),
@@ -69,7 +62,7 @@ class _TaskScreenState extends State<TaskScreen> {
                     ),
                   ),
                   Text(
-                    '${Provider.of<TaskData>(context).tasks.length} Tasks',
+                    '${Provider.of<TaskData>(context).taskCount} Tasks',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
